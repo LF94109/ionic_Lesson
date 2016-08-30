@@ -1,0 +1,10 @@
+/* Empty. Add your own CSS if you like */
+
+
+*{
+	box-sizing: border-box;
+}
+
+.search{
+	border-radius: 30px;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html ng-app="zlf">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ionic的css学习</title>
+		<!--1、设置一下viewprot属性-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<!--2/引入ionic的CSS文件-->
+		<link rel="stylesheet" href="lib/ionic/css/ionic.min.css" />
+		<!--3、引入我们自己的CSS文件-->
+		<link rel="stylesheet" href="css/style.css" />
+		<!--4、引入ionnic的JS文件-->
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+		<!--5、引入ionic的启动文件-->
+		<script src="js/app2.js"></script>
+
+	</head>
+
+	<body>
+
+		<!--------------------------颜色---------------------------->
+		<!--灰色-->
+		<!--<div class="bar bar-stable">灰色</div>-->
+		<!--蓝色-->
+		<!--<div class="bar bar-positive">蓝色</div>-->
+		<!--海天蓝-->
+		<!--<div class="bar bar-calm">我就来看看</div>-->
+		<!--绿色-->
+		<!--<div class="bar bar-balanced">我就来看看</div>-->
+		<!--黄色-->
+		<!--<div class="bar bar-energized">我就来看看</div>-->
+		<!--红色-->
+		<!--<div class="bar bar-assertive">我就来看看</div>-->
+		<!--紫色-->
+		<!--<div class="bar bar-royal">我就来看看</div>-->
+		<!--黑色-->
+		<!--<div class="bar bar-dark">我就来看看</div>-->
+
+		<!--基本的页面布局，导航，内容，底部-->
+		<div class="bar bar-header bar-dark item-input-inset">
+			<!--添加文字-->
+			<!--<h1 class="title">我是标题</h1>-->
+
+			<!--在导航里边添加搜索框-->
+			<a class="button button-clear icon-left ion-android-arrow-dropdown">北京</a>
+			<label class="search item-input-wrapper">
+				
+				<input type="text" placeholder="请输入您需要查询的内容" />
+			</label>
+
+		</div>
+
+		<div class="bar bar-subheader bar-assertive">
+			<h2 class="title">我是副标题</h2>
+
+			<!--按钮-->
+			<div class="button-bar">
+				<button class="button">新闻</button>
+				<button class="button">娱乐</button>
+				<button class="button">体育</button>
+				<button class="button">军事</button>
+				<button class="button">科技</button>
+			</div>
+		</div>
+
+		<div style="overflow-y: auto;" class="scroll-content has-header has-subheader has-footer">
+			<p class="padding balanced royal-bg dark-border">我是一段内容</p>
+			<i style="font-size: 100px;" class="assertive ion-ios-heart-outline"></i>
+			<i style="font-size: 100px;" class="assertive ion-ios-flame"></i>
+			<i style="font-size: 100px;" class="assertive ion-social-html5"></i>
+
+			<!--列表-->
+			<ul class="list">
+				<li class="item item-borderless item-assertive">列表1</li>
+				<li class="item item-calm">列表2</li>
+				<li class="item item-dark">列表3</li>
+				<li class="item item-balanced">列表4</li>
+				<li class="item item-stable">列表5</li>
+
+				<!--分组-->
+				<li class="item item-divider"></li>
+				<li class="item item-royal">列表6</li>
+				<li class="item item-energized">列表7</li>
+				<li class="item item-positive">列表8</li>
+				<li class="item item-light">列表9</li>
+			</ul>
+			<!--文字列表，应用场景，发布的最新时事新闻，公告，警告等-->
+			<ul class="list">
+				<li class="item">
+					<h2>几天郑州天气晴朗，万里无云</h2>
+					<p>今天郑州终于告别了连日来的高温天气，本周天气会持续凉爽，吃瓜群众表示很高兴时</p>
+				</li>
+				<li class="item">
+					<h2>中秋节的来临带来了月饼的热销</h2>
+					<p>月饼有五仁月饼，芥末月饼，豆沙月饼，枣泥月饼.................</p>
+				</li>
+				<li class="item">
+					<h2>恭喜EDG拿到LPL夏季赛全国总冠军</h2>
+					<p>今天的比赛站罢，中国区的战队EDG和RNG携手挺近世界总决赛，预计EDG八强，RNG亚军</p>
+				</li>
+			</ul>
+			<!--列表中添加图标-->
+			<ul class="list">
+				<li class="item item-icon-left item-icon-right">
+					<i class="icon ion-stats-bars calm"></i>
+					<p style="font-size: 20px;">城市</p>
+					<p style="float: right;margin-top: -22px; font-size: 20px;">当前位置</p>
+					<i class="icon ion-chevron-right"></i>
+				</li>
+				
+				<li class="item item-icon-left item-icon-right">
+					<i class="icon ion-android-calendar calm"></i>
+					
+				</li>
+				
+				<li class="item item-icon-left item-icon-right">
+					<i class="icon ion-social-yen calm"></i>
+					<input type="text" placeholder="价格范围" />
+					<p style="float: right;margin-top: -22px;font-size: 20px;">不限价格</p>
+					<i class="icon ion-chevron-right"></i>
+				</li>
+			</ul>
+			
+			<!--列表中添加头像-->
+			<ul class="list">
+				<li class="item item-avatar-left">
+					<img src="img/adam.jpg"/>
+					<h2 class="title">外国人</h2>
+					<p>你好，在吗？</p>
+				</li>
+				<li class="item item-avatar-left">
+					<img src="img/adam.jpg"/>
+					<h2 class="title">外国人</h2>
+					<p>你好，在吗？</p>
+				</li>
+				<li class="item item-avatar-left">
+					<img src="img/adam.jpg"/>
+					<h2 class="title">外国人</h2>
+					<p>你好，在吗？</p>
+				</li>
+			</ul>
+			
+			<!--新闻-->
+			<ul class="list">
+				<li class="item item-thumbnail-right">
+					<img src="img/01.jpg"/>
+					<h2>郑州买房子如春运，专家：房价疯涨不会持续太久</h2>
+					<p>郑州买房 ，郑州房价 | 8小时前</p>
+				</li>
+				<li class="item item-thumbnail-right">
+					<img src="img/02.jpg"/>
+					<h2>男子刀捅城管致1死1伤，此前经常发生冲突</h2>
+					<p>男子刀捅城管致1死1伤，此前经常发生冲突 | 8小时前</p>
+				</li>
+				<li class="item item-thumbnail-right">
+					<img src="img/03.jpg"/>
+					<h2>女孩儿大学入学通知书失踪</h2>
+					<p>女孩儿通知书丢失  | 8小时前</p>
+				</li>
+				<!--添加大图-->
+				<li class="item item-image">
+					<img src="img/04.jpg"/>
+				</li>
+				<!--按钮-->
+				<a class="button button-large button-assertive">按钮1</a>
+				<a class="button button-small button-calm">按钮2</a>
+				<a class="button button-full button-positive">按钮3</a>
+				
+				<!--正常写法-->
+				<a class="button button-royal">
+					提交
+					<i class="icon ion-android-cloud"></i>
+				</a>
+				<!--简单的写法，直接在按钮中定义图标-->
+				<a class="button icon-left ion-home calm-bg">提交</a>
+			</ul>
+			<ul class="list">
+				<li class="item item-button-right">
+					<p>是否要删除？</p>
+					<button class="button icon-right button-assertive">删除</button>
+				</li>
+			</ul>
+		</div>
+
+		<!--<div class="bar bar-subfooter bar-stable">
+			<h3 class="title">我是副底部</h3>
+		</div>-->
+	
+		<div class="bar bar-footer bar-dark">
+			<h1 class="title">我是底部</h1>
+		</div>
+	</body>
+
+</html>
