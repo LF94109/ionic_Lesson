@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link rel="stylesheet" href="lib/ionic/css/ionic.min.css" />
+  <link rel="stylesheet" href="css/我的.css" />
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="js/app2.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="bar bar-header bar-light icon-right">
+  <h4 align-title="left">我的</h4>
+  <div class="icon-left icon-right" style="position: absolute;right:0;">
+    <a class="button button-clear icon-right">
+      <i class="icon ion-ios-gear-outline"></i>
+    </a>
+    <a class="button button-clear icon-right">
+      <i class="icon ion-ios-bell-outline"></i>
+    </a>
+  </div>
+</div>
+
+<!--内容-->
+<div class="scroll-content has-header has-footer"style="overflow-y: auto;">
+  <div class="calm-bg" style="height: 120px;position: relative;">
+    <a class="button button-clear icon-right " style="width:100%;margin-top: 20px;">
+      <img src="img/img/head.png" style="border-radius: 50px;float: left;">
+      <span style="color: white;position: absolute; left:80px;top: 20px;">请点击登录</span>
+      <i class="icon ion-chevron-right" style="color:white;position: absolute;top: 20px;right: 6px;"></i>
+    </a>
+    <ul class="list">
+      <li class="button button-clear">
+        美团券
+      </li>
+      <li class="button button-clear">
+        评价
+      </li>
+      <li class="button button-clear">
+        收藏
+      </li>
+    </ul>
+  </div>
+  <ul class="list"style="margin: 10px 0;" id="list1">
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+        <img src="img/img/dingdan.png" style="left: 5px;top: -1px;">
+        <span class="title dark" style="position: absolute;left: 60px;">我的订单</span>
+        <span style="font-size: 12px;position: absolute;right: 20px; color: #9e9e9e;">查看全部订单</span>
+        <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;font-size: 14px;"></i>
+    </li>
+    <li class="item" style="display: flex;justify-content: space-between;padding-top: 0;">
+      <a class="button button-clear icon-top">
+        <i class="icon ion-card dark"></i>
+        <h3 style="font-size: 10px;">待付款</h3>
+      </a>
+      <a class="button button-clear icon-top">
+        <i class="icon ion-cash dark"></i>
+        <h3 style="font-size: 10px;">待使用</h3>
+      </a><a class="button button-clear icon-top">
+      <i class="icon ion-chatbox-working dark"></i>
+      <h3 style="font-size: 10px;">待评价</h3>
+      </a>
+      <a class="button button-clear icon-top">
+      <i class="icon ion-social-usd-outline dark"></i>
+      <h3 style="font-size: 10px;">退款/售后</h3>
+      </a>
+    </li>
+  </ul>
+  <ul class="list" id="list2">
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+      <img src="img/img/qianbao.png" style="left: 5px;top: -1px;">
+      <span class="title dark" style="position: absolute;left: 60px;">我的钱包</span>
+      <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;"></i>
+    </li>
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+      <img src="img/img/diyongquan.png" style="left: 5px;top: -1px;">
+      <span class="title dark" style="position: absolute;left: 60px;">抵用券</span>
+      <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;"></i>
+    </li>
+  </ul>
+  <ul class="list" id="list3">
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+      <img src="img/img/haoyou.png" style="left: 5px;top: -1px;">
+      <span class="title dark" style="position: absolute;left: 60px;">好友去哪</span>
+      <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;"></i>
+    </li>
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+      <img src="img/img/today.png" style="left: 5px;top: -1px;">
+      <span class="title dark" style="position: absolute;left: 60px;">今日推荐</span>
+      <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;"></i>
+    </li>
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+      <img src="img/img/kefu.png" style="left: 5px;top: -1px;">
+      <span class="title dark" style="position: absolute;left: 60px;">联系客服</span>
+      <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;"></i>
+    </li>
+    <li class="item item-avatar-left button button-clear" style="width:100%;">
+      <img src="img/img/hezuo.png" style="left: 5px;top: -1px;">
+      <span class="title dark" style="position: absolute;left: 60px;">我要合作</span>
+      <span style="font-size: 12px;position: absolute;right: 20px; color: #9e9e9e;">轻松开店，招财进宝</span>
+      <i class="icon ion-chevron-right" style="float: right;color: #9e9e9e;top: 10px;"></i>
+
+    </li>
+  </ul>
+</div>
+
+<!--底部-->
+<!--底部-->
+<div class="tabs tabs-light tabs-icon-top">
+  <a class="tab-item ">
+    <i class="icon ion-home"></i>
+    <span  onclick="location.href='美团①.html'">首页</span>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-beer"></i>
+    <span onclick="location.href='美团②.html'">商家</span>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-android-person"></i>
+    <span onclick="location.href='美团--我的.html'">我的</span>
+  </a>
+  <a class="tab-item  active tab-item-calm">
+    <i class="icon ion-ios-more-outline"></i>
+    <span onclick="location.href='美团-更多.html'">更多</span>
+  </a>
+</div>
+</body>
+</html>

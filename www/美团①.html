@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>美团①</title>
+		<title>首页</title>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 		<link rel="stylesheet" href="lib/ionic/css/ionic.min.css" />
 		<link rel="stylesheet" href="css/美团①.css" />
@@ -15,9 +15,8 @@
 		<!--头部-->
 		<div class="bar bar-header bar-calm ">
 			<a class="button button-clear icon-right ion-ios-arrow-down">郑州</a>
-
 			<a class="item-input-inset icon-left light-bg">
-				<i class="ion-ios-search"></i>
+				<i class="icon ion-ios-search"></i>
 				<input type="text" placeholder="输入商家、分类或商圈" />
 			</a>
 			<a class="button button-clear icon-left">
@@ -75,94 +74,98 @@
 					</a>
 				</div>
 			</div>
-			
+
 			<ul class="list">
 				<li class="item item-thumbnail-left">
-					<img src="img/img/01.jpg"/>
-					<span>
+            <img src="img/img/01.jpg"/>
+            <img src="img/img/yy.png" class="service">
+					<div>
 						<h2 class="title"><strong>天天手擀面</strong></h2>
 						<span id="space">11.5km</span>
-					</span>
+					</div>
 					<p class="articel">[丰业广场/千盛广场]面食8选1</p>
-					<span class="money">
+					<div class="money">
 						<i class="calm icon ion-social-yen">39.9</i>
 						<span>门市价:￥10</span>
 						<span>已售12992</span>
-					</span>
+					</div>
 				</li>
 				<li class="item item-thumbnail-left">
 					<img src="img/img/02.jpg"/>
-					<span>
+					<div>
 						<h2 class="title"><strong>锦蓝时尚酒店</strong></h2>
 						<span id="space">996m</span>
-					</span>
+					</div>
 					<p class="articel">管城回族去郑州经济技术开发区航海路与第二大街交叉口北300米</p>
-					<span class="money">
+					<div class="money">
 						<i class="calm icon ion-social-yen">128</i>
 						<span>起</span>
 						<span></span>
-					</span>
+					</div>
 				</li>
 				<li class="item item-thumbnail-left">
 					<img src="img/img/03.jpg"/>
-					<span>
+          <img src="img/img/yy.png" class="service">
+					<div>
 						<h2 class="title"><strong>佰年王婆大虾</strong></h2>
 						<span id="space">1.7km</span>
-					</span>
+					</div>
 					<p class="articel">[经开区]美味双人餐，提供免费WiFi</p>
-					<span class="money">
+					<div class="money">
 						<i class="calm icon ion-social-yen">69</i>
 						<span></span>
 						<span>已售557</span>
-					</span>
+					</div>
 				</li>
 				<li class="item item-thumbnail-left">
 					<img src="img/img/04.jpg"/>
-					<span class="money">
+					<div>
 						<h2 class="title"><strong>合丰源滋补烩面</strong></h2>
 						<span id="space">780m</span>
-					</span>
+					</div>
 					<p class="articel">[经开区]主食2选1，提供免费WiFi</p>
-					<span class="money">
+					<div class="money">
 						<i class="calm icon ion-social-yen">9.8</i>
 						<span></span>
 						<span>已售2759</span>
-					</span>
+					</div>
 				</li>
 				<li class="item item-thumbnail-left">
-					<img src="img/img/03.jpg"/>
-					<span>
+					<img src="img/img/05.jpg"/>
+          <img src="img/img/yy.png" class="service">
+					<div>
 						<h2 class="title"><strong>兄妹土豆粉</strong></h2>
 						<span id="space">1.1km</span>
-					</span>
+					</div>
 					<p class="articel">[经开区]单人餐，提供免费WiFi</p>
-					<span class="money">
+					<div class="money">
 						<i class="calm icon ion-social-yen">11.8</i>
 						<span></span>
 						<span>已售3059</span>
-					</span>
+					</div>
 				</li>
 			</ul>
 		</div>
 		<!--底部-->
-		<div class="tabs tabs-light tabs-icon-top">
-			<a class="tab-item active tab-item-calm">
-				<i class="icon ion-home"></i>
-				<span>首页</span>
-			</a>
-			<a class="tab-item">
-				<i class="icon ion-beer"></i>
-				<span>商家</span>
-			</a>
-			<a class="tab-item">
-				<i class="icon ion-android-person"></i>
-				<span>我的</span>
-			</a>
-			<a class="tab-item">
-				<i class="icon ion-ios-more-outline"></i>
-				<span>更多</span>
-			</a>
-		</div>
+    <!--底部-->
+    <div class="tabs tabs-light tabs-icon-top">
+      <a class="tab-item ">
+        <i class="icon ion-home"></i>
+        <span  onclick="location.href='美团①.html'">首页</span>
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-beer"></i>
+        <span onclick="location.href='美团②.html'">商家</span>
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-android-person"></i>
+        <span onclick="location.href='美团--我的.html'">我的</span>
+      </a>
+      <a class="tab-item  active tab-item-calm">
+        <i class="icon ion-ios-more-outline"></i>
+        <span onclick="location.href='美团-更多.html'">更多</span>
+      </a>
+    </div>
 	</body>
 
 </html>

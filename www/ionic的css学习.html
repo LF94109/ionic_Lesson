@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ionic的特效总结</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<link rel="stylesheet" href="lib/ionic/css/ionic.min.css" />
+		<link rel="stylesheet" href="css/style1.css" />
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+		<script src="js/app3.js"></script>
+	</head>
+	<body ng-app="zlf" ng-controller="listCtrl">
+		<!--早期写法-->
+		<!--<div class="bar bar-header">
+			<h1 class="title">我是标题</h1>
+		</div>-->
+
+    <!--用指令形式bar的布局-->
+    <!--头部-->
+		<!--<ion-header-bar align-title="left" no-tap-scroll="true" class="bar-positive">-->
+      <!--<p class="title">我是标题</p>-->
+		<!--</ion-header-bar>-->
+    <!--&lt;!&ndash;内容区域&ndash;&gt;-->
+    <!--<ion-content overflow-scroll="false">-->
+      <!--<ul class="list">-->
+        <!--<li class="item" ng-repeat="item in items">{{item}}</li>-->
+      <!--</ul>-->
+    <!--</ion-content>-->
+    <!--&lt;!&ndash;页脚&ndash;&gt;-->
+    <!--<ion-footer-bar align-title="left" class="bar-dark">-->
+      <!--<h1 class="title">我是页脚</h1>-->
+    <!--</ion-footer-bar>-->
+
+    <!--拉动刷新-->
+    <!--<ion-header-bar align-title="center" class="bar-assertive">-->
+      <!--<h1 class="title">拉动刷新</h1>-->
+    <!--</ion-header-bar>-->
+    <!--<ion-content>-->
+      <!--<ion-refresher pulling-text="正在进行拉动刷新，请等待.." on-refresh="doRefresh()"></ion-refresher>-->
+      <!--<ul class="list">-->
+        <!--<li class="item" ng-repeat="item in items">{{item}}</li>-->
+      <!--</ul>-->
+    <!--</ion-content>-->
+
+    <!--&lt;!&ndash;滚动刷新&ndash;&gt;-->
+    <!--<ion-header-bar align-title="center" class="bar-positive">-->
+      <!--<h1 class="title">滚动刷新</h1>-->
+    <!--</ion-header-bar>-->
+    <!--<ion-content ng-controller="scrollCtrl">-->
+      <!--<ul class="list">-->
+        <!--<li class="item" ng-repeat="item in items">{{item}}</li>-->
+      <!--</ul>-->
+      <!--<ion-infinite-scroll on-infinite="more()"></ion-infinite-scroll>-->
+    <!--</ion-content>-->
+
+    <!--tabs的布局-->
+    <!--<ion-tabs class="tabs-striped tabs-top tabs-icon-top" ng-controller="tabCtrl">-->
+      <!--<ion-tab title="国内新闻" icon-off="ion-home"icon-on="ion-home assertive">-->
+        <!--<ion-view>-->
+          <!--<ion-content>-->
+            <!--1-->
+          <!--</ion-content>-->
+        <!--</ion-view>-->
+      <!--</ion-tab>-->
+      <!--<ion-tab title="国际新闻" icon-off="ion-ios-search" icon-on="ion-ios-search assertive"on-select="dosomething()">-->
+        <!--<ion-view>-->
+          <!--<ion-content>-->
+            <!--2-->
+          <!--</ion-content>-->
+        <!--</ion-view>-->
+      <!--</ion-tab>-->
+      <!--<ion-tab title="本地新闻" icon-off="ion-android-person"icon-on="ion-android-person asssertive">-->
+        <!--<ion-view>-->
+          <!--<ion-content>-->
+            <!--3-->
+          <!--</ion-content>-->
+        <!--</ion-view>-->
+      <!--</ion-tab>-->
+    <!--</ion-tabs>-->
+  <!--列表-->
+  <!--<ion-header-bar align-title="center" class="bar-assertive">-->
+    <!--<h1 class="title">列表删除和排序</h1>-->
+  <!--</ion-header-bar>-->
+  <!--<ion-content ng-controller="allCtrl">-->
+    <!--<ion-list show-delete="true" show-reorder="true">-->
+      <!--<ion-item ng-repeat="item in items">-->
+        <!--{{item}}-->
+        <!--&lt;!&ndash;删除按钮&ndash;&gt;-->
+        <!--<ion-delete-button class="ion-minus-circled" ng-click="delete_item(item)">-->
+        <!--</ion-delete-button>-->
+
+        <!--&lt;!&ndash;排序按钮&ndash;&gt;-->
+        <!--<ion-reorder-button class="ion-navicon" on-reorder="move_item(item,$fromIndex,$toIndex)">-->
+        <!--</ion-reorder-button>-->
+
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+  <!--</ion-content>-->
+
+  <!--侧边栏-->
+  <!--<ion-side-menus>-->
+    <!--&lt;!&ndash;中心内容&ndash;&gt;-->
+    <!--<ion-side-menu-content>-->
+      <!--<ion-footer-bar align-title="center" class="bar-dark">-->
+        <!--<a class="button button-clear ion-navicon" style="font-size: 35px" menu-toggle="left"></a>-->
+        <!--<h1 class="title">侧边栏的实例</h1>-->
+      <!--</ion-footer-bar>-->
+      <!--<ion-content class="assertive-bg light">我是内容区域</ion-content>-->
+    <!--</ion-side-menu-content>-->
+    <!--&lt;!&ndash;左侧滑动出来的内容&ndash;&gt;-->
+    <!--<ion-side-menu class="balanced-bg light" side="left">-->
+      <!--我是左侧滑动出来的内容-->
+    <!--</ion-side-menu>-->
+  <!--</ion-side-menus>-->
+
+  <!--幻灯片-->
+    <!--does-continue是否循环切换-->
+  <!--<ion-slide-box show-pager="true" pager-click="index" slide-interval="1000" auto-play="true" does-continue="true">-->
+    <!--<ion-slide>-->
+      <!--<img src="img/img/a.jpg">-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<img src="img/img/b.jpg">-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<img src="img/img/c.jpg">-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<img src="img/img/d.jpg">-->
+    <!--</ion-slide>-->
+  <!--</ion-slide-box>-->
+
+  <!--复选框-->
+  <!--<ion-content ng-controller="check">-->
+    <!--<ion-list>-->
+      <!--<ion-checkbox ng-repeat="item in items" ng-model="item.selected">-->
+        <!--{{item.label}}:{{item.selected}}-->
+      <!--</ion-checkbox>-->
+    <!--</ion-list>-->
+    <!--&lt;!&ndash;原生复选框&ndash;&gt;-->
+    <!--<label>你的名字</label>-->
+    <!--<input type="checkbox"value="name">-->
+  <!--</ion-content>-->
+
+  <!--单选框-->
+  <!--<ion-content ng-controller="radio">-->
+    <!--<div class="list">-->
+      <!--<div class="item item-divider">你的选择是:{{ret.choice}}</div>-->
+      <!--<ion-radio ng-repeat="item in items" ng-model="ret.choice" ng-value="item">-->
+        <!--{{item}}-->
+      <!--</ion-radio>-->
+    <!--</div>-->
+  <!--</ion-content>-->
+
+  <!--==模态框==-->
+  <!--<ion-content ng-controller="modal" padding="true">-->
+    <!--<button class="button button-block dark energized-bg" ng-click="openModal()">打开模态框</button>-->
+  <!--</ion-content>-->
+  <!--&lt;!&ndash;模版，模版的名称是由ID来指明的&ndash;&gt;-->
+    <!--<script id="modal.html" type="text/ng-template">-->
+      <!--<ion-modal-view>-->
+          <!--<ion-header-bar class="calm-bg">-->
+             <!--<h1 class="title">模态框示例</h1>-->
+            <!--<a class="button" ng-click="closeModal()">X</a>-->
+          <!--</ion-header-bar>-->
+          <!--<ion-content>-->
+            <!--hello！world！-->
+          <!--</ion-content>-->
+      <!--</ion-modal-view>-->
+    <!--</script>-->
+
+  <!--上拉菜单-->
+  <!--<ion-header-bar class="bar-assertive" ng-controller="slideup">-->
+    <!--<h1 class="title">上拉菜单</h1>-->
+    <!--<a class="button" ng-click="show()">上拉</a>-->
+  <!--</ion-header-bar>-->
+  <!--<ion-content padding="true" class="has-header">-->
+    <!--<p>Ionic遵循视图控制模式，通俗的理解和 Cocoa 触摸框架相似。在视图控制模式中，我们将界面的不同部分分为子视图或包含其他视图的子视图控制器。然后视图控制器“驱动”内部视图来提供交互和UI功能。一个很好的例子就是标签栏（Tab Bar）视图控制器处理点击标签栏在一系列可视化面板间切换。</p>-->
+  <!--</ion-content>-->
+
+  <!--弹出框-->
+    <ion-header-bar class="bar-assertive">
+      <h1 class="title">弹出框</h1>
+    </ion-header-bar>
+  <ion-content ng-controller="PopupCtrl">
+    <button class="button button-calm" ng-click="show()">Confirm</button>
+    <button class="button button-assertive" ng-click="alert()">Alert</button>
+    <button class="button button-balanced" ng-click="prompt()">Prompt</button>
+  </ion-content>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

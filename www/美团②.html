@@ -1,41 +1,265 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<title>美团②</title>
+		<title>商家</title>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 		<link rel="stylesheet" href="lib/ionic/css/ionic.min.css" />
 		<link rel="stylesheet" href="css/美团②.css" />
 		<script src="lib/ionic/js/ionic.bundle.js"></script>
 		<script src="js/app2.js"></script>
 	</head>
-	<body>
+
+	<body ng-app="zlf">
 		<!--头部-->
-		<div class="bar bar-header">
-			
-		</div>
+		<!--<div class="bar bar-header bar-light icon-right">-->
+		<!--<span class="tabs-striped calm">-->
+		<!--<div class="tabs">-->
+		<!--<a class="tab-item">全部商家</a>-->
+		<!--<a class="tab-item">优惠商家</a>-->
+		<!--</div>-->
+		<!--</span>-->
+		<!--<a class="icon icon-right">-->
+		<!--<i class="icon ion-ios-search"></i>-->
+		<!--</a>-->
+		<!--</div>-->
+
+		<!--==============================================================================-->
+		<!--tabs的布局-->
+		<ion-tabs class="tabs-striped tabs-top" ng-controller="tabCtrl">
+			<ion-tab title="全部商家" class="dark" on-select="dosomething()">
+				<ion-view>
+					<ion-content>
+            <ul class="list">
+              <li class="item item-thumbnail-left">
+                <img src="img/img/01.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>天天手擀面</strong></h2>
+                  <span id="space">11.5km</span>
+                </div>
+                <p class="articel">[丰业广场/千盛广场]面食8选1</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">39.9</i>
+                  <span>门市价:￥10</span>
+                  <span>已售12992</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/02.jpg"/>
+                <div>
+                  <h2 class="title"><strong>锦蓝时尚酒店</strong></h2>
+                  <span id="space">996m</span>
+                </div>
+                <p class="articel">管城回族去郑州经济技术开发区航海路与第二大街交叉口北300米</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">128</i>
+                  <span>起</span>
+                  <span></span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/03.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>佰年王婆大虾</strong></h2>
+                  <span id="space">1.7km</span>
+                </div>
+                <p class="articel">[经开区]美味双人餐，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">69</i>
+                  <span></span>
+                  <span>已售557</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/04.jpg"/>
+                <div>
+                  <h2 class="title"><strong>合丰源滋补烩面</strong></h2>
+                  <span id="space">780m</span>
+                </div>
+                <p class="articel">[经开区]主食2选1，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">9.8</i>
+                  <span></span>
+                  <span>已售2759</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/05.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>兄妹土豆粉</strong></h2>
+                  <span id="space">1.1km</span>
+                </div>
+                <p class="articel">[经开区]单人餐，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">11.8</i>
+                  <span></span>
+                  <span>已售3059</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/04.jpg"/>
+                <div>
+                  <h2 class="title"><strong>合丰源滋补烩面</strong></h2>
+                  <span id="space">780m</span>
+                </div>
+                <p class="articel">[经开区]主食2选1，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">9.8</i>
+                  <span></span>
+                  <span>已售2759</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/05.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>兄妹土豆粉</strong></h2>
+                  <span id="space">1.1km</span>
+                </div>
+                <p class="articel">[经开区]单人餐，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">11.8</i>
+                  <span></span>
+                  <span>已售3059</span>
+                </div>
+              </li>
+            </ul>
+					</ion-content>
+				</ion-view>
+			</ion-tab>
+			<ion-tab title="优惠商家" class="dark" on-select="dosomething()">
+				<ion-view>
+					<ion-content>
+            <ul class="list">
+              <li class="item item-thumbnail-left">
+                <img src="img/img/04.jpg"/>
+                <div>
+                  <h2 class="title"><strong>合丰源滋补烩面</strong></h2>
+                  <span id="space">780m</span>
+                </div>
+                <p class="articel">[经开区]主食2选1，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">9.8</i>
+                  <span></span>
+                  <span>已售2759</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/05.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>兄妹土豆粉</strong></h2>
+                  <span id="space">1.1km</span>
+                </div>
+                <p class="articel">[经开区]单人餐，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">11.8</i>
+                  <span></span>
+                  <span>已售3059</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/01.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>天天手擀面</strong></h2>
+                  <span id="space">11.5km</span>
+                </div>
+                <p class="articel">[丰业广场/千盛广场]面食8选1</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">39.9</i>
+                  <span>门市价:￥10</span>
+                  <span>已售12992</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/02.jpg"/>
+                <div>
+                  <h2 class="title"><strong>锦蓝时尚酒店</strong></h2>
+                  <span id="space">996m</span>
+                </div>
+                <p class="articel">管城回族去郑州经济技术开发区航海路与第二大街交叉口北300米</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">128</i>
+                  <span>起</span>
+                  <span></span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/03.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>佰年王婆大虾</strong></h2>
+                  <span id="space">1.7km</span>
+                </div>
+                <p class="articel">[经开区]美味双人餐，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">69</i>
+                  <span></span>
+                  <span>已售557</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/04.jpg"/>
+                <div>
+                  <h2 class="title"><strong>合丰源滋补烩面</strong></h2>
+                  <span id="space">780m</span>
+                </div>
+                <p class="articel">[经开区]主食2选1，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">9.8</i>
+                  <span></span>
+                  <span>已售2759</span>
+                </div>
+              </li>
+              <li class="item item-thumbnail-left">
+                <img src="img/img/05.jpg"/>
+                <img src="img/img/yy.png" class="service">
+                <div>
+                  <h2 class="title"><strong>兄妹土豆粉</strong></h2>
+                  <span id="space">1.1km</span>
+                </div>
+                <p class="articel">[经开区]单人餐，提供免费WiFi</p>
+                <div class="money">
+                  <i class="calm icon ion-social-yen">11.8</i>
+                  <span></span>
+                  <span>已售3059</span>
+                </div>
+              </li>
+            </ul>
+					</ion-content>
+				</ion-view>
+			</ion-tab>
+		</ion-tabs>
+
 		<!--内容-->
 		<div class="scroll-content has-header has-footer">
-			
+
 		</div>
 		<!--底部-->
-		<div class="tabs tabs-light tabs-icon-top">
-			<a class="tab-item ">
-				<i class="icon ion-home"></i>
-				<span>首页</span>
-			</a>
-			<a class="tab-item active tab-item-calm">
-				<i class="icon ion-beer"></i>
-				<span>商家</span>
-			</a>
-			<a class="tab-item">
-				<i class="icon ion-android-person"></i>
-				<span>我的</span>
-			</a>
-			<a class="tab-item">
-				<i class="icon ion-ios-more-outline"></i>
-				<span>更多</span>
-			</a>
-		</div>
+    <!--底部-->
+    <div class="tabs tabs-light tabs-icon-top">
+      <a class="tab-item ">
+        <i class="icon ion-home"></i>
+        <span  onclick="location.href='美团①.html'">首页</span>
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-beer"></i>
+        <span onclick="location.href='美团②.html'">商家</span>
+      </a>
+      <a class="tab-item">
+        <i class="icon ion-android-person"></i>
+        <span onclick="location.href='美团--我的.html'">我的</span>
+      </a>
+      <a class="tab-item  active tab-item-calm">
+        <i class="icon ion-ios-more-outline"></i>
+        <span onclick="location.href='美团-更多.html'">更多</span>
+      </a>
+    </div>
 	</body>
+
 </html>
